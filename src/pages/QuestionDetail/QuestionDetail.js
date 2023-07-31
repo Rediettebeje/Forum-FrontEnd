@@ -12,9 +12,8 @@ const SingleQuestion = () => {
   const [answers, setAnswers] = useState([]);
   const questionByPostId = async () => {
     try {
-      const question = await axios.get(
-        // 
-        `http://localhost:2000/api/questions/${params.userId}`
+      const question = await axios.get(`${process.env.REACT_APP_Base_url}/api/questions/${params.userId}`
+      
       );
       setQuestion(question.data.data);
     } catch (err) {
@@ -24,7 +23,7 @@ const SingleQuestion = () => {
   const answersByQuestionId = async () => {
     try {
       const answersRes = await axios.get(
-        `http://localhost:2000/api/answers/${question?.question_id}`
+        `${process.env.REACT_APP_Base_url}/api/answers/${question?.question_id}`
       );
       setAnswers(answersRes.data.data);
     } catch (err) {

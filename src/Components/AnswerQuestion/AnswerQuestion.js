@@ -21,7 +21,8 @@ const AnswerQuestion = () => {
     const fetchQuestions = async () => {
       try {
         // //fetching the questions from data base (getPosts(found in question.controller))
-        const questionRes = await fetch("http://localhost:2000/api/questions/post", {
+        const questionRes = await fetch(`${process.env.REACT_APP_Base_url}/api/questions/post`
+       , {
           method: "GET",
           // ///needs auth
           headers: {
@@ -66,8 +67,7 @@ const AnswerQuestion = () => {
   const handelClick = async (e) => {
     e.preventDefault();
     try {
-      const loginRes = await axios.post(
-        "http://localhost:2000/api/answers/",
+      const loginRes = await axios.post(`${process.env.REACT_APP_Base_url}/api/answers/`,
         {
           answer: form.answer,
           questionId: filteredquestionId,
@@ -98,7 +98,7 @@ const AnswerQuestion = () => {
   const fetchAnswers = async () => {
     try {
       const answerRes = await axios.get(
-        `http://localhost:2000/api/answers/${filteredquestionId}`,
+        `${process.env.REACT_APP_Base_url}/api/answers/${filteredquestionId}`,
         {
           headers: { "x-auth-token": userData.token },
         }

@@ -11,8 +11,8 @@ const Home = () => {
   const navigate = useNavigate();
   const Questions = async () => {
     try {
-      const questionRes = await axios.get(
-        "http://localhost:2000/api/questions"
+      const questionRes = await axios.get(`${process.env.REACT_APP_Base_url}/api/questions`
+
       );
       console.log(questionRes)
       setAllQuestions(questionRes.data.data);

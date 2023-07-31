@@ -20,7 +20,7 @@ function App() {
       localStorage.setItem("x-auth-token", "");
       token = "";
     } else {
-      const userRes = await axios.get("http://localhost:2000/api/users", {
+      const userRes = await axios.get(`${process.env.REACT_APP_Base_url}/api/users`, {
         headers: { "x-auth-token": token },
       });
 
