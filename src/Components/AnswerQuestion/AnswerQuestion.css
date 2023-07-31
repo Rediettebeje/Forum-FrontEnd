@@ -1,0 +1,80 @@
+.answer_form {
+    min-height: 490px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 5px 5px 10px #e8e8e8, -5px -5px 10px #ffffff;
+}
+
+.answer_input {
+    height: 200px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 1.15384615rem;
+    border: silver 1px solid;
+}
+
+.answer_input:focus {
+    outline: none;
+}
+
+.answer_post_btn {
+    max-width: 200px;
+    height: 41px;
+    background-color: #516cf0;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 1rem;
+   margin-top: 20px;
+}
+
+.answer_post_btn:hover {
+    background-color: #fe8402;
+}
+
+.answer_post_btn:active {
+    background-color: #516cf0;
+}
+.user{
+    margin-left: 23px;
+    padding-top: 15px;
+}
+
+.answer{
+    padding-bottom: 30px;
+    padding-left: 100px;
+
+}
+.answerInfo{
+    display: flex;
+}
+.top{
+    align-items: center;
+    padding-left: 400px;
+    /* padding-left: 50%; */
+}
+
+.goto{
+    padding-left: 470px;
+    margin-top: 30px;
+        padding-top: 80px;
+}
+
+textarea {
+    overflow-x: auto;
+    /* or overflow-x: scroll; */
+}
+
+@media (max-width: 768px) {
+.top {
+        align-items: center;
+        padding-left: 80px;
+        /* padding-left: 50%; */
+    }
+
+    .goto {
+        padding-left: 150px;
+        margin-top: 30px;
+        padding-top: 80px;
+    }
+}
