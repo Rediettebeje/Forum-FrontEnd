@@ -17,7 +17,7 @@ function App() {
   const checkLoggedIn = async () => {
     let token = localStorage.getItem("x-auth-token");
     if (token === null) {
-      localStorage.setItem("x-auth-token", "");
+      localStorage.setItem("x-auth-token", "")
       token = "";
     } else {
       const userRes = await axios.get(`${process.env.REACT_APP_Base_url}/api/users`, {
